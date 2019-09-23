@@ -1,0 +1,24 @@
+zuul:
+  prefix: /api
+  routes:
+    ORDER-SERVICE:
+      path: /order/**
+      serviceId: order-service
+    PRODUCT_RATING_SERVICE:
+      path: /rating/**
+      serviceId: PRODUCT-RATING-SERVICE
+    PRODUCT_SERVICE:
+      path: /product/**
+      serviceId: PRODUCT-SERVICE
+
+
+eureka:
+  client:
+    fetchRegistry: true
+    registryFetchIntervalSeconds: 5
+    registerWithEureka: true
+    serviceUrl:
+      defaultZone: http://localhost:8014/eureka
+  instance:
+    preferIpAddress: true
+       

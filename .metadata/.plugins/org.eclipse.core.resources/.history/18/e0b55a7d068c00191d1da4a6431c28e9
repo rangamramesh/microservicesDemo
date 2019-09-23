@@ -1,0 +1,5 @@
+zuul:
+#server will be mapped under the /api URI.
+prefix:/api
+routes:
+  hello-server
